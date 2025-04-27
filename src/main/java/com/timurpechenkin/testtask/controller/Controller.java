@@ -17,7 +17,7 @@ public class Controller {
 	@Autowired
 	XLSXService xlsxService;
 
-	@Tag(name = "getMinNumber", description = "Получить N-е минимальное значение из файла XLSX")
+	@Tag(name = "getMinNumber", description = "Get N-th minimum integer number from XLSX file")
 	@GetMapping("/min/{n}")
 	public String getMinNumber(@RequestParam String filePath, @PathVariable int n) {
 		return xlsxService.getMinNumber(filePath, n);
